@@ -10,15 +10,15 @@ Simulation of the one-time pad using a pseudorandom number generator to generate
 **Usage:**
 
 Encrypt: `streamCipher password plaintext ciphertext`
-
 Decrypt: `streamCipher password ciphertext plaintext`
 
 ## Block Cipher with CBC Mode
-Modification of the stream cipher to operate on 16-byte blocks instead of bytes, utilizing cipher block chaining (CBC) and shuffling bytes within a block. 
 
+Modification of the stream cipher to operate on 16-byte blocks instead of bytes, utilizing cipher block chaining (CBC) and shuffling bytes within a block. 
 - Adds padding of 1 to 16 extra bytes at the end of the file to address partial blocks (16 bytes added if the file is an exact multiple of 16 bytes).
 
 **Cipher Operation Flow:**
+
 - Start with an IV (initialization vector) derived as the first 16 bytes coming from the keystream.
 - For each 16-byte plaintext_block:
     - Apply the CBC: `temp_block(N) = plaintext_block(N) ⊕ ciphertext_block(N-1)`, using IV if it is the first block.
@@ -29,5 +29,11 @@ Modification of the stream cipher to operate on 16-byte blocks instead of bytes,
 **Usage:**
 
 Encrypt: `blockCipherEncryption password plaintext ciphertext`
-
 Decrypt: `blockCipherDecryption password ciphertext plaintext`
+
+
+**Testing:**
+
+To test:
+1. Create a random password.
+2. Use a binary data-based file as plaintext (like .txt, .jpg).
