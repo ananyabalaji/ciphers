@@ -34,7 +34,7 @@ Encrypt: `blockCipherEncryption password plaintext ciphertext`
 Decrypt: `blockCipherDecryption password ciphertext plaintext`
 
 
-**Testing:**
+## Testing:
 
 To test:
 1. Create a random password.
