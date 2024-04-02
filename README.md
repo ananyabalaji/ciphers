@@ -37,6 +37,6 @@ Decrypt: `blockCipherDecryption password ciphertext plaintext`
 ## Testing:
 
 To test:
-1. Create a random password.
+1. Create a random password. (REMEMBER to reuse to decrypt)
 2. Use a binary data-based file as plaintext (like .txt, .jpg) to encrypt
-3. Use the encrypted ciphertext to decrypt to a new file (name of your choice)
+3. Use the encrypted ciphertext file to decrypt to a new file (name of your choice) and see the magic happen!
