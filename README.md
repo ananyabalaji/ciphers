@@ -10,6 +10,7 @@ Simulation of the one-time pad using a pseudorandom number generator to generate
 **Usage:**
 
 Encrypt: `streamCipher password plaintext ciphertext`
+
 Decrypt: `streamCipher password ciphertext plaintext`
 
 ## Block Cipher with CBC Mode
@@ -29,6 +30,7 @@ Modification of the stream cipher to operate on 16-byte blocks instead of bytes,
 **Usage:**
 
 Encrypt: `blockCipherEncryption password plaintext ciphertext`
+
 Decrypt: `blockCipherDecryption password ciphertext plaintext`
 
 
@@ -36,4 +38,5 @@ Decrypt: `blockCipherDecryption password ciphertext plaintext`
 
 To test:
 1. Create a random password.
-2. Use a binary data-based file as plaintext (like .txt, .jpg).
+2. Use a binary data-based file as plaintext (like .txt, .jpg) to encrypt
+3. Use the encrypted ciphertext to decrypt to a new file (name of your choice)
