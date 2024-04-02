@@ -35,6 +35,7 @@ Decrypt: `blockCipherDecryption password ciphertext plaintext`
 
 
 ## Testing:
+Compile the programs using javac.
 
 To test:
 1. Create a random password. (**REMEMBER to reuse to decrypt**)
