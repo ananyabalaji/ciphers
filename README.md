@@ -1,4 +1,4 @@
-# Implementation of a Stream Cipher and Block Cipher with CBC
+# Ciphers: Encryption + Decryption
 
 ## Stream Cipher
 Simulation of the one-time pad using a pseudorandom number generator to generate keystream data that is the same length as the message:
@@ -13,7 +13,7 @@ Encrypt: `streamCipher password plaintext ciphertext`
 
 Decrypt: `streamCipher password ciphertext plaintext`
 
-## Block Cipher with CBC
+## Block Cipher with CBC Mode
 Modification of the stream cipher to operate on 16-byte blocks instead of bytes, utilizing cipher block chaining (CBC) and shuffling bytes within a block. 
 
 - Adds padding of 1 to 16 extra bytes at the end of the file to address partial blocks (16 bytes added if the file is an exact multiple of 16 bytes).
