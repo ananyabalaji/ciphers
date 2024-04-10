@@ -13,16 +13,13 @@ public class streamCipher {
     }
 
     // Method that constructs a keystream of length of the message given the seed
-    public static byte[] generateKey(long seed, int messageLength) {
-        byte[] keyStream = new byte[messageLength];
-        keyStream[0] = (byte) (seed % 256);
+    public static long generateKey(long seed) {
         long a = 1103515245;
         long m = 256;
         long c = 12345;
-        for (int i = 1; i < messageLength; i++) {
-            keyStream[i] = (byte) ((a * keyStream[i - 1] + c) % m);
-        }
-        return keyStream;
+        
+        return ((a * seed) + c) % m;
+        // return keyStream;
     }
 
     public static void streamCipher(byte[] plaintext, byte[] key, FileOutputStream ciphertextFile) throws IOException {
@@ -30,7 +27,6 @@ public class streamCipher {
             if (i < key.length) {
                 ciphertextFile.write((byte) (plaintext[i] ^ key[i]));
             } else {
-                // If key is shorter than plaintext, use key[0] for remaining plaintext bytes
                 ciphertextFile.write((byte) (plaintext[i] ^ key[0]));
             }
         }
@@ -47,14 +43,13 @@ public class streamCipher {
 
         try (FileInputStream plainTextFile = new FileInputStream(plaintextFilePath);
              FileOutputStream ciphertextFile = new FileOutputStream(ciphertextFilePath)) {
-            byte[] block = new byte[16];
-            while (true) {
-                int bytesRead = plainTextFile.read(block);
-                if (bytesRead == -1) {
-                    break;
-                }
-                byte[] key = generateKey(sdbm(password), bytesRead);
-                streamCipher(block, key, ciphertextFile);
+            
+            long seed = sdbm(password);
+            int dataByte = plainTextFile.read();
+            while (dataByte != -1){
+                seed = generateKey(seed);
+                ciphertextFile.write((int) seed ^ dataByte);
+                dataByte = plainTextFile.read();
             }
         } catch (IOException e) {
             e.printStackTrace();
