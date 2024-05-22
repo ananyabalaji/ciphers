@@ -4,7 +4,7 @@
 Can be recreated as a table where the characters of a message is written horizontally across the rows of a rod of specific thickness (key). Characters of message are read vertically by columns. 
 
 `(Example):`
-BRAVEHEART on a 3 row x 4 column tablet yields BERRHTAEXVAX, where X represents the padded data ignored by the reader to help complete the table. However, in this implementation, the padding is dispensed (so the length of ciphertext = length of plaintext).
+**BRAVEHEART** on a 3 row x 4 column tablet yields **BERRHTAEXVAX**, where **X** represents the padded data ignored by the reader to help complete the table. However, in this implementation, I have the padding dispensed (so the length of ciphertext = length of plaintext).
 
 A cipher can be arbitrarily long, and this is enabled in the program.
 
