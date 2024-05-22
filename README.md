@@ -8,9 +8,10 @@ Can be recreated as a table where the characters of a message is written horizon
 
 In this implementation, I have the padding dispensed (so the `length of ciphertext` **=** `length of plaintext`).
 
-A cipher can be arbitrarily long, and this is enabled in the program.
+A plaintext and ciphertext can be arbitrarily long, and this is enabled in the program.
 
-The cipher is weak - since once the attacker has a table size, they can recreate the plaintext. 
+However, by just implementing the above, the cipher is weak - since once the attacker has a table size, they can recreate the plaintext. 
+
 A key is used to prevent this. It is an alphanumeric string defining table width and the sequence in which columns are read from the table.
 
 **User Provides:**
