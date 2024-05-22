@@ -12,7 +12,7 @@ A plaintext and ciphertext can be arbitrarily long, and this is enabled in the p
 
 However, by just implementing the above, the cipher is weak - since once the attacker has a table size, they can recreate the plaintext. 
 
-A key is used to prevent this. It is an alphanumeric string defining table width and the sequence in which columns are read from the table.
+In my code, the **key** is used to prevent this. It is an alphanumeric string that not only defines table width, but shuffles around the sequence in which columns are read from the table.
 
 **User Provides:**
 - `[OPTIONAL]` block size (max size of data read in one iteration - default is 16)
