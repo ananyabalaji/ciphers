@@ -6,7 +6,7 @@ Can be recreated as a table where the characters of a message is written horizon
 **(Example):**
 **BRAVEHEART** on a 3 x 4 tablet yields **BERRHTAEXVAX**, where **X** represents the padded data ignored by the reader to help complete the table. 
 
-In this implementation, I have the padding dispensed (so the length of ciphertext = length of plaintext).
+In this implementation, I have the padding dispensed (so the `length of ciphertext` **=** `length of plaintext`).
 
 A cipher can be arbitrarily long, and this is enabled in the program.
 
