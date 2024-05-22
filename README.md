@@ -1,9 +1,9 @@
 # Ciphers: Encryption + Decryption
 
 ## Pad-free Columnar Tranposition Cipher
-Can be recreated as a table where the characters of a message is written horizontally across the rows of a rod of specific thickness (represented here by the **key**). Characters of message are read vertically by columns. 
+Can be recreated as a table where the characters of a message is written horizontally across the rows of a rod of specific thickness (key). Characters of message are read vertically by columns. 
 
-(Example) 
+`(Example):`
 BRAVEHEART on a 3 row x 4 column tablet yields BERRHTAEXVAX, where X represents the padded data ignored by the reader to help complete the table. However, in this implementation, the padding is dispensed (so the length of ciphertext = length of plaintext).
 
 A cipher can be arbitrarily long, and this is enabled in the program.
@@ -12,7 +12,7 @@ From there, because the cipher is weak (since all the attacker needs is the tabl
 A key is an alphanumeric string defining table width and the sequence in which columns are read from the table.
 
 Uses the user-provided:
-- `[optional]` block size (max size of data read in one iteration - default is 16)
+- `[OPTIONAL]` block size (max size of data read in one iteration - default is 16)
 - key (no greater than 512 bytes and enables printable ASCII)
 - plaintext/ciphertext file
 
