@@ -15,11 +15,11 @@ However, by just implementing the above, the cipher is weak - since once the att
 In my code, the **key** is used to prevent this. It is an alphanumeric string that not only defines table width, but shuffles around the sequence in which columns are read from the table.
 
 **User Provides:**
-    - **key** (no greater than 512 bytes and enables printable ASCII)
-    - **plaintext/ciphertext file**
+- **key** (no greater than 512 bytes and enables printable ASCII)
+- **plaintext/ciphertext file**
 
     `[OPTIONAL]` 
-     - **block size** (max size of data read in one iteration - default is 16)
+- **block size** (max size of data read in one iteration - default size is 16)
 
 **Usage:**
 
