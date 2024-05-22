@@ -19,7 +19,7 @@ In my code, the **key** is used to prevent this. It is an alphanumeric string th
     - **plaintext/ciphertext file**
 
     `[OPTIONAL]` 
-    - **block size** (max size of data read in one iteration - default is 16)
+     - **block size** (max size of data read in one iteration - default is 16)
 
 **Usage:**
 
